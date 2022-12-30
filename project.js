@@ -125,7 +125,7 @@ function ntT() {
             return night + " AM - " + afternT + " AM"
         else return night + " AM - " + afternT + " PM"
     }
-    else {
+    else if(time.getHours() == night) {
         afternT = afternT - 12;
         night = night - 12;
         if (night < 11)
