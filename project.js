@@ -62,7 +62,7 @@ function setAlarm() {
         document.getElementById("grab").innerText = "Stop Yawning, Get Some Tea.. It's Just Evening !! "
     }
 
-    else{
+    else if(time.getHours() == night){
         document.getElementById("text").innerText = "Good Night!! "
         document.getElementById("imgM").src = "./Component 32 – 1.png"
         document.getElementById("imgM").style.borderRadius = "2vw"
@@ -125,7 +125,7 @@ function ntT() {
             return night + " AM - " + afternT + " AM"
         else return night + " AM - " + afternT + " PM"
     }
-    else if(time.getHours() == night){
+    else {
         afternT = afternT - 12;
         night = night - 12;
         if (night < 11)
